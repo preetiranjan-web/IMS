@@ -1,0 +1,15 @@
+{% extends 'common.html' %}
+{% block preeti %}
+    <table align="center" border="2">
+            {% if data %}
+                {% for x in data %}
+                    <tr>
+                        <th colspan="2">Status</th>
+                        <th>
+                            <a href="{% url 'fetch_status' x.car_serial_no %}">{{ x.status }}<a>
+                        </th>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+    </table>
+{% endblock %}

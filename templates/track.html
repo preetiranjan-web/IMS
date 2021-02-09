@@ -1,0 +1,15 @@
+{% extends 'common.html' %}
+{% block preeti %}
+    <table align="center" border="2">
+            {% if data %}
+                {% for x in data %}
+                    <tr>
+                        <th colspan="2">Tracking id</th>
+                        <th>
+                            <a href="{% url 'fetch_track' x.product_id %}">{{ x.track_id }}<a>
+                        </th>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+    </table>
+{% endblock %}

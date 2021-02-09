@@ -1,0 +1,43 @@
+{% extends 'common.html' %}
+{% block preeti %}
+    <form action="{% url "save_product" %}" method="post">
+    {% csrf_token %}
+
+    <table align="center" border="2">
+    <tr>
+        <th>Add New Inventory</th>
+    </tr>
+    <tr>
+        <th>
+            <input type="text" required name="p1" placeholder="Car Model">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="text" required name="p2" placeholder="Car Variant">
+        </th>
+    </tr>
+    <tr>
+        <th>
+           Manufacturing Date: <input type="date" required name="p3">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="number" required name="p4" placeholder="chasis No">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="number" required name="p5" placeholder="Engine no">
+        </th>
+    </tr>
+        <tr>
+            <th>
+                <button type="submit"> save </button>
+            </th>
+        </tr>
+
+</table>
+    </form>
+{% endblock %}

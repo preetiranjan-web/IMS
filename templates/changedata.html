@@ -1,0 +1,29 @@
+<html>
+<body>
+<form action="{% url 'update' %}" method="post">
+    {% csrf_token %}
+<table align="center" border="2">
+    <tr>
+        <th>
+            status<input type="text" value="{{ data.status }}" required name="c1" >
+        </th>
+    </tr>
+    <tr>
+        <th>
+            shipping<input type="date" required name="c2">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            serial No<input type="text" readonly value="{{ data.car_serial_no }}"  name="c3" >
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button type="submit">update</button>
+        </th>
+    </tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends "common.html" %}
+{% block preeti %}
+    <table align="center" border="2">
+    <tr><th colspan="7">View Details</th></tr>
+    <tr>
+        <th>Car Model</th>
+        <th>car variant</th>
+        <th>Manufacture date</th>
+        <th>Serial No</th>
+        <th>chasis No</th>
+        <th>Engine No</th>
+        <th>status</th>
+    </tr>
+    {% for x in data %}
+        <tr>
+        <th>{{ x.carmodel }}</th>
+        <th>{{ x.variant }}</th>
+        <th>{{ x.mdate }}</th>
+        <th>{{ x.car_serial_no }}</th>
+        <th>{{ x.chasis_no }}</th>
+        <th>{{ x.engine_no }}</th>
+        <th>{{ x.status }}</th>
+
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

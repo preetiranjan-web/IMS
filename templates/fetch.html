@@ -1,0 +1,26 @@
+{% extends 'common.html' %}
+{% block preeti %}
+<table align="center" border="2">
+    <tr>
+        <th>Car serial No</th>
+         <th>Manufacture Date</th>
+        <th>Car Model</th>
+        <th>car variant</th>
+        <th>chasis No</th>
+        <th>Engine No</th>
+        <th>Status</th>
+    </tr>
+{% if data %}
+    <tr>
+    <th>{{ data.car_serial_no }}</th>
+    <th>{{ data.mdate }}</th>
+    <th>{{ data.carmodel }}</th>
+    <th>{{ data.variant }}</th>
+    <th>{{ data.chasis_no }}</th>
+    <th>{{ data.engine_no }}</th>
+    <th>{{ data.status }}</th>
+    </tr>
+{% endif %}
+
+</table>
+{% endblock %}

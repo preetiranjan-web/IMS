@@ -1,0 +1,17 @@
+{% extends 'common.html' %}
+{% block preeti %}
+    <table align="center" border="2">
+    <tr>
+        <th>
+            Total Car Produced
+        </th>
+    </tr>
+    {% if data %}
+        <tr>
+        <th>
+                {{ data }}
+        </th>
+        </tr>
+    {% endif %}
+    </table>
+{% endblock %}

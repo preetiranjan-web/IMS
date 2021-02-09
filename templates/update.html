@@ -1,0 +1,22 @@
+{% extends 'common.html' %}
+{% block preeti %}
+    <table align="center" border="2">
+    <tr>
+        <th>Update Details</th>
+    </tr>
+    <tr>
+        <th>
+           Car serial No
+        </th>
+    </tr>
+        {% if data %}
+            {% for x in data %}
+                <tr>
+                <th>
+            <a href="{% url "update_data" x.car_serial_no %}">{{ x.car_serial_no }}</a>
+                </th>
+                </tr>
+            {% endfor %}
+    {% endif %}
+    </table>
+{% endblock %}
